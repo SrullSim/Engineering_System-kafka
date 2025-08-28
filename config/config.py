@@ -13,7 +13,7 @@ This module is responsible for:
 # --- Path Configuration ---
 PROJECT_ROOT = Path(__file__).parent.parent
 APP_DIR = PROJECT_ROOT / "app" 
-DATA_DIR = PROJECT_ROOT / "data"
+DATA_DIR = PROJECT_ROOT /"processes"/ "data"
 CONFIG_DIR = PROJECT_ROOT / "config"
 WEAPONS_FILE_PATH = DATA_DIR / "weapons.txt"
 
@@ -35,7 +35,15 @@ API_DESCRIPTION = settings.get("API_DESCRIPTION", "A default API description.")
 API_VERSION = settings.get("API_VERSION", "1.0.0")
 OUTPUT_COLUMNS = settings.get("OUTPUT_COLUMNS", ["id", "Text", "rarest_word", "sentiment", "weapons_detected"])
 TEXT_COLUMN = settings.get("TEXT_COLUMN", "Text")
+
+
 TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC = settings.get("TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC", "topic")
+TOPIC_OUTPUT_RETRIVAL_NOT_ANTISEMITIC = settings.get("TOPIC_OUTPUT_RETRIVAL_NOT_ANTISEMITIC", "topic")
+
 TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC =settings.get("TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC", "topic")
 TOPIC_OUTPUT_CLEANER_ANTISEMITIC = settings.get("TOPIC_OUTPUT_CLEANER_ANTISEMITIC", "topic")
+
 URI = settings.get("URI", "uri")
+
+TOPIC_OUTPUT_ENRICHER_ANTISEMITIC = settings.get("TOPIC_OUTPUT_ENRICHER_ANTISEMITIC", "topic")
+TOPIC_OUTPUT_ENRICHER_NOT_ANTISEMITIC = settings.get("TOPIC_OUTPUT_ENRICHER_NOT_ANTISEMITIC", "topic")

@@ -1,11 +1,11 @@
 {
-  "URI": "mongodb+srv://IRGC_NEW:iran135@cluster0.6ycjkak.mongodb.net/",
+  "URI": "m.net/",
   "DB_NAME": "IranMalDB",
   "COLLECTION_NAME": "tweets",
   "API_TITLE": "Mongo-FastAPI-Processing-Pipeline",
   "API_DESCRIPTION": "An API to fetch, process, and serve analysis of text data from MongoDB.",
   "API_VERSION": "1.0.0",
-  "OUTPUT_COLUMNS": ["id", "Text", "rarest_word", "sentiment", "weapons_detected"],
+  "OUTPUT_COLUMNS": ["id", "createdate", "antisemietic", "original_text", "clean_text", "sentiment","weapons_detected","relevant_timestamp"],
   "TEXT_COLUMN": "Text",
 
   "TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC": "raw_tweets_antisemitic",
@@ -17,8 +17,9 @@
   "TOPIC_OUTPUT_ENRICHER_ANTISEMITIC": "enriched_preprocessed_tweets_antisemitic",
   "TOPIC_OUTPUT_ENRICHER_NOT_ANTISEMITIC": "enriched_preprocessed_tweets_not_antisemitic",
 
+  "TWEETS_ANTISEMITIC": "tweets_antisemitic",
+  "TWEETS__NOT_ANTISEMITIC": "tweets_not_antisemitic"
 
-  "TOPIC_OUTPUT_C_ANTISEMITIC": "preprocessed_tweets_antisemitic"
 
 
 
