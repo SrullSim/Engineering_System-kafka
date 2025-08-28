@@ -9,7 +9,7 @@ class MongoDAL:
 
     def get_collection(self):
 
-        return list(self.collection.find({ }, {"_id": 0}))
+        return list(self.collection.find())
 
     def add_document(self, message):
         self.collection.insert_one(message)
