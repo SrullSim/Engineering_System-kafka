@@ -15,4 +15,7 @@ class MongoDAL:
         self.collection.insert_one(message)
         return {"status": "success", "message": "added"}
 
+    def length_collection(self):
+        return self.collection.count_documents({})
+
 
