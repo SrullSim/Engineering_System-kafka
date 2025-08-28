@@ -57,7 +57,7 @@ class Cleaner:
         return text.lower()
 
 
-test_text = (" self. the #    # m  and with for about  kdir & git % in @ OPen?"
-             "Programmers program with programming languages ")
-c = Cleaner
-print(c.find_the_roots_of_words(test_text))
+# test_text = (" self. the #    # m  and with for about  kdir & git % in @ OPen?"
+#              "Programmers program with programming languages ")
+# c = Cleaner
+# print(c.find_the_roots_of_words(test_text))
