@@ -1,5 +1,5 @@
 {
-  "URI": "mongodb+srv://IRGC_NEW:iran135@cluster0.6ycjkak.mongodb.net/",
+  "URI": "m.net/",
   "DB_NAME": "IranMalDB",
   "COLLECTION_NAME": "tweets",
   "API_TITLE": "Mongo-FastAPI-Processing-Pipeline",
