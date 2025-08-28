@@ -12,10 +12,6 @@ class MongoDAL:
 
         return list(self.collection.find({ }))
 
-    def add_document(self, message):
-        self.collection.insert_one(message)
-        return {"status": "success", "message": "added"}
-
     def get_value(self, field):
         return list(self.collection.find_one({}, {field:0}))
 
