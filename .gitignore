@@ -230,8 +230,8 @@ secrets.json
 *.pkl
 *.pickle
 models/
-data/raw/
-data/processed/
+processes/data/raw/
+processes/data/processed/
 *.h5
 *.hdf5
 
