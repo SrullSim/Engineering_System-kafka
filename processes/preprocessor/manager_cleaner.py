@@ -1,18 +1,18 @@
 from cleaner import Cleaner
 from kafka_files.producer import Producer
 from kafka_files.consumer import Consumer
-from config.config import TOPIC_INPUT_CLEANER_ANTISEMITIC
+from config.config import TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC
 from config.config import TOPIC_OUTPUT_CLEANER_ANTISEMITIC
+from config.config import TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC
 
 class ManagerCleaner:
 
-    def __init__(self, topic):
-        self.topic = topic
+    def __init__(self,topic):
+        self.input_topic = topic
         self.producer = Producer()
-        self.consumer = Consumer(self.topic)
+        self.consumer = Consumer(self.input_topic)
         self.event = self.consumer.get_consumer_events()
         self.cleaner = Cleaner()
-        self.topic_output =
 
 
 
@@ -26,10 +26,9 @@ class ManagerCleaner:
             new_massage = self.cleaner.uppercase_to_lowercase(new_massage)
             new_massage = self.cleaner.find_the_roots_of_words(new_massage)
 
-            self.producer.publish_message(,{"clean_text":new_massage})
 
+            if self.input_topic == TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC:
+                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_ANTISEMITIC,{"clean_text":new_massage})
+            else:
+                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC,{"clean_text":new_massage})
 
-
-# topic = "anti"
-# m = ManagerCleaner(topic)
-# m.consume_and_produce()
