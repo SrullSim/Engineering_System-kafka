@@ -34,3 +34,9 @@ class Producer:
     def publish_message_with_key(self, topic, key, message):
         """ publish_message to a specific topic secure with key """
         self.producer.send(topic, key=key, value=message)
+
+
+# p = Producer()
+# topic = "anti"
+# mas = {"my":" self. the #    # m  and with for about  kdir & git % in @ OPen? Programmers program with programming languages"}
+# p.publish_message(topic, mas)
