@@ -18,6 +18,7 @@ class ManagerCleaner:
 
     def consume_and_produce(self):
         for massage in self.event:
+            original_text = str(massage.value.values())
             # start cleaning end preparing
             new_massage = self.cleaner.remove_punctuation_marks(str(massage.value.values()))
             new_massage = self.cleaner.remove_special_characters(new_massage)
@@ -28,7 +29,7 @@ class ManagerCleaner:
 
 
             if self.input_topic == TOPIC_OUTPUT_RETRIVAL_ANTISEMITIC:
-                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_ANTISEMITIC,{"clean_text":new_massage})
+                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_ANTISEMITIC,{"clean_text":new_massage,"original_text": original_text})
             else:
-                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC,{"clean_text":new_massage})
+                self.producer.publish_message(TOPIC_OUTPUT_CLEANER_NOT_ANTISEMITIC,{"clean_text":new_massage, "original_text": original_text})
 
