@@ -1,0 +1,12 @@
+{
+  "DB_NAME": "IranMalDB",
+  "COLLECTION_NAME": "tweets",
+  "API_TITLE": "Mongo-FastAPI-Processing-Pipeline",
+  "API_DESCRIPTION": "An API to fetch, process, and serve analysis of text data from MongoDB.",
+  "API_VERSION": "1.0.0",
+  "OUTPUT_COLUMNS": ["id", "Text", "rarest_word", "sentiment", "weapons_detected"],
+  "TEXT_COLUMN": "Text",
+  "TOPIC_OUTPUT__ANTISEMITIC": "preprocessed_tweets_antisemitic",
+  "TOPIC_OUTPUT_CLEANER_ANTISEMITIC": "preprocessed_tweets_antisemitic",
+
+}
